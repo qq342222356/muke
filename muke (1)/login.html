@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/注册</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+    }
+    .zc{
+        /*display: none;*/
+        width: 80%;
+        margin:10% auto;
+    }
+    .zc div h1{
+       float: left;
+    }
+    .zc div{
+        float: left;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .zc input{
+        width: 78%;
+        height:60px;
+        float: right;
+        border-style:none;
+        border-bottom: 2px solid #000;
+    }
+    .dl{
+        display: none;
+        width: 80%;
+        margin:10% auto;
+    }
+    .dl div h1{
+        float: left;
+    }
+    .dl div{
+        float: left;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .dl input{
+        width: 78%;
+        height:60px;
+        float: right;
+        border-style:none;
+        border-bottom: 2px solid #000;
+    }
+    .container .top{
+        width: 80%;
+        margin:0 auto;
+    }
+    .login{
+        float: right;
+        /*margin-right: ;*/
+    }
+    .reg{
+        float: left;
+    }
+    button{
+        width: 100px;
+        height: 38px;
+        background: #2196F3;
+        color: #fff;
+    }
+    .pic{
+        width: 40%;
+        margin:100px auto;
+        height: 300px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    a{
+        list-style: none;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="pic">
+        <img src="login.png" alt="">
+    </div>
+    <div class="zc">
+        <a href="list.html"><p style="text-align: center;font-size: 50px;color: #a94442;margin-bottom: 20%">注册账号</p></a>
+        <div><h1>用户名：</h1><input type="text" placeholder="请输入手机号码/phone Number"></div>
+        <div><h1>验证码：</h1><input type="text" placeholder="请输入4位验证码/code"><button style="float: right">点击获取</button></div>
+        <div><h1>密码：</h1><input type="password" placeholder="请输入密码/password"></div>
+        <div><h1>确认密码：</h1><input type="password" placeholder="请再次输入密码/password again"></div>
+        <button style="width: 200px;height: 80px;background: red;margin-left: 38%;margin-top: 10%;font-size: 30px;">注册</button>
+        <div class="reg" style="float: right">已有账号?<span id="dl" style="color: #00a2d4;">点击登录</span></div>
+    </div>
+    <div class="dl">
+        <p style="text-align: center;font-size: 50px;color: #a94442;margin-bottom: 20%">登录</p>
+        <div><h1>用户名：</h1><input type="text" placeholder="请输入手机号码"></div>
+        <div style="margin-top: 100px"><h1>密码：</h1><input type="password" placeholder="请输入密码"></div>
+        <button style="width: 200px;height: 80px;background: red;margin-left: 38%;margin-top: 10%;font-size: 30px;">登录</button>
+        <div class="login" style="float: right">还未注册?<span id="zc" style="color: #00a2d4">点击注册</span></div>
+    </div>
+</div>
+<script src="jquery-2.2.3.min.js"></script>
+<script>
+    $("#dl").click(function () {
+        $(".dl").css("display","block");
+        $(".zc").css("display","none");
+
+    })
+    $("#zc").click(function () {
+        $(".zc").css("display","block");
+        $(".dl").css("display","none");
+
+    })
+</script>
+</body>
+</html>

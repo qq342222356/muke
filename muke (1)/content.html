@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+    }
+    video{
+        width: 100%;
+        height: 500px;
+    }
+    .content{
+        width: 90%;
+        margin: 20px auto;
+    }
+    .jj{
+        width: 100%;
+        height: 80px;
+        margin: 0 auto;
+        border-bottom: 1px solid #0f0f0f;
+    }
+</style>
+<body>
+<div class="container">
+    <h1 style="text-align: center">关于慕课详情</h1>
+    <video controls="controls" autoplay src="cideo.Ogg"></video>
+    <div class="content">
+        <div style="">
+            <span style="font-weight: 900;">这是慕课标题的位置</span>
+            <span style="color: rgb(110,110,110); float: right;">更新完成|共X节课</span>
+            <h2 style="color: red;font-weight: 900;">￥99</h2>
+            <h3 style="color: rgba(255,191,133,0.8);">一次购买永久观看！</h3>
+
+        </div>
+
+        <div class="about" style="width: 100%;height:50px;background: rgba(255,191,133,0.47)">
+            <h2 class="ab" style="color:rgba(255,191,133,0.95);line-height: 50px;">关于账号 <span style="float: right">>>></span></h2>
+            <div class="about_ds" style="width: 80%;background:rgb(251, 221, 194);margin: 0 auto;border-radius: 40px;padding: 30px 50px;z-index: 999;display: none;position: relative">
+                <h1 style="text-align: center;font-weight: 700;color: #000;">账号说明</h1>
+                <h2>1.本账号一经购买本视屏可以永久观看。</h2>
+                <h2>2.本账号和本公司的APP《百问在线》是同一账号，在任意一方购买在两方都可以观看。（《百问在线APP》可在个手机APP商城下载）</h2>
+                <h2>3.本公司拥有最终解释权。</h2>
+                <h2 class="x" style="position: absolute;top: -20px;right: 30px;font-size: 40px">X</h2>
+            </div>
+        </div>
+
+        <div class="jj">
+                <li style="text-align: center;list-style: none;font-size: 50px;margin-top: 10px">简介</li>
+        </div>
+        <div class="font"></div>
+    </div>
+</div>
+</body>
+<script src="jquery-2.2.3.min.js"></script>
+<script>
+    $(".ab").click(function () {
+        $(".about_ds").css("display","block");
+    })
+    $(".about .about_ds .x").click(function () {
+        $(".about_ds").css("display","none");
+    })
+</script>
+</html>
